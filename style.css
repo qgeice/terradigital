@@ -16,6 +16,13 @@ header {
   padding: 40px 20px;
 }
 
+header img {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px;
+}
+
 header h1 {
   margin: 0;
   font-size: 2.5em;
