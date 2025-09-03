@@ -1,46 +1,129 @@
+/* Reset básico e fonte */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
 }
 
+/* Cabeçalho */
 header {
-  background: #1a73e8;
+  background-color: #1a73e8;
   color: white;
-  padding: 20px;
   text-align: center;
+  padding: 40px 20px;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+/* Seções */
 section {
-  padding: 20px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
+/* Títulos das seções */
 h2 {
   color: #1a73e8;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
+/* Lista de serviços */
 ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 li {
-  background: white;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-footer {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 220px;
   text-align: center;
-  padding: 10px;
-  background: #333;
-  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+li img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Seção de Contato */
+#contato p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+#contato img {
+  width: 25px;
+  height: 25px;
+}
+
+/* Links */
 a {
   color: #1a73e8;
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Banner da seção de serviços */
+#servicos img {
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li {
+    width: 90%;
+  }
+}
