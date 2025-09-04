@@ -1,69 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
   <title>Terra Digital - Serviços de Hardware</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fonte opcional (descomente se quiser usar) -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"> -->
+  <style>
+    /* CSS mínimo inline para funcionar sem style.css externo (você pode mover para style.css) */
+    :root {
+      --bg: #f7f7f7;
+      --card: #ffffff;
+      --text: #333;
+      --muted: #666;
+      --accent: #2a7ae2;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background: var(--bg); color: var(--text); }
+    header { text-align: center; padding: 40px 20px 20px; }
+    header img { max-width: 240px; width: 60%; height: auto; display: block; margin: 0 auto 8px; }
+    header p { margin: 6px 0 0; color: var(--muted); }
+    main { max-width: 980px; margin: 0 auto; padding: 20px; }
+    h2 { font-size: 1.75rem; margin: 0 0 12px; }
+    hr { border: 0; height: 1px; background: #e5e5e5; margin: 20px 0; }
+    .servicos { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+    .card { background: var(--card); border-radius: 12px; padding: 16px; box-shadow: 0 2px 6px rgba(0,0,0,.05); text-align: left; }
+    .card img { max-width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 10px; }
+    .card h3 { font-size: 1.05rem; margin: 0 0 6px; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+    .contact { display:flex; flex-direction:column; gap:8px; margin-top: 6px; }
+    .contact a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .logo { display:block; margin: 0 auto 8px; }
+    @media (max-width: 600px) {
+      header { padding: 20px 10px; }
+    }
+  </style>
 </head>
 <body>
-  <!-- Cabeçalho -->
   <header>
-    <img src="images/logo.png" alt="Logo Terra Digital" class="logo">
-    <p class="slogan">Serviços de manutenção e suporte em informática</p>
+    <!-- Substitua o src pela sua logo/localização desejada -->
+    <img class="logo" src="images/logo.png" alt="Logo Terra Digital">
+    <p>Serviços de manutenção e suporte em informática</p>
   </header>
 
-  <!-- Seção de Serviços -->
-  <section id="servicos">
-    <h2>Meus Serviços</h2>
+  <main>
+    <section aria-label="Meus Serviços">
+      <h2>Meus Serviços</h2>
+      <hr />
+      <div class="servicos">
+        <article class="card">
+          <img src="images/limpeza-interna.jpg" alt="Limpeza interna">
+          <h3>Limpeza interna</h3>
+          <p>Limpeza interna de computadores e notebooks</p>
+        </article>
 
-    <!-- Removido o banner daqui -->
-    
-    <!-- Cards de serviços -->
-    <ul>
-      <li>
-        <img src="images/limpeza-interna.jpg" alt="Limpeza interna">
-        <p>Limpeza interna de computadores e notebooks</p>
-      </li>
-      <li>
-        <img src="images/upgrade-ram.jpg" alt="Upgrade de RAM">
-        <p>Troca de HD por SSD e upgrade de RAM</p>
-      </li>
-      <li>
-        <img src="images/substituir-bateria.jpg" alt="Substituição de tela e bateria">
-        <p>Substituição de telas e baterias de notebooks</p>
-      </li>
-      <li>
-        <img src="images/substituir-wlan.jpg" alt="Instalação de placa WLAN">
-        <p>Instalação de placas WLAN / placas de rede</p>
-      </li>
-      <li>
-        <img src="images/reparo-basico.jpg" alt="Reparo básico">
-        <p>Reparo básico de hardware e diagnóstico de problemas</p>
-      </li>
-    </ul>
-  </section>
+        <article class="card">
+          <img src="images/upgrade-ram.jpg" alt="Upgrade de RAM">
+          <h3>Upgrade de RAM</h3>
+          <p>Troca de HD por SSD e upgrade de RAM</p>
+        </article>
 
-  <!-- Seção de Contato -->
-  <section id="contato">
-    <h2>Contato</h2>
+        <article class="card">
+          <img src="images/substituir-bateria.jpg" alt="Substituição de tela e bateria">
+          <h3>Substituição de tela e bateria</h3>
+          <p>Substituição de telas e baterias de notebooks</p>
+        </article>
 
-    <!-- WhatsApp -->
-    <p>
-      <img src="images/wpp.png" alt="WhatsApp">
-      WhatsApp: <a href="https://wa.me/5592995327669">Clique para enviar mensagem</a>
-    </p>
+        <article class="card">
+          <img src="images/substituir-wlan.jpg" alt="Instalação de placa WLAN">
+          <h3>Instalação de placa WLAN</h3>
+          <p>Instalação de placas WLAN / placas de rede</p>
+        </article>
 
-    <!-- E-mail -->
-    <p>
-      <img src="images/gmail-logo.jpg" alt="E-mail">
-      E-mail: <a href="mailto:terradigital2024@gmail.com">terradigital2024@gmail.com</a>
-    </p>
-  </section>
+        <article class="card">
+          <img src="images/reparo-basico.jpg" alt="Reparo básico">
+          <h3>Reparo básico</h3>
+          <p>Reparo básico de hardware e diagnóstico de problemas</p>
+        </article>
+      </div>
+    </section>
 
-  <!-- Rodapé -->
-  <footer>
-    &copy; 2025 Terra Digital - Todos os direitos reservados
-  </footer>
+    <section aria-label="Contato" style="margin-top:28px;">
+      <h2>Contato</h2>
+      <hr />
+      <div class="contact">
+        <p>
+          <img src="images/wpp.png" alt="WhatsApp" style="height:28px; vertical-align:middle; margin-right:6px;">
+          <a href="https://wa.me/5592995327669" target="_blank" rel="noopener">WhatsApp: Clique para enviar mensagem</a>
+        </p>
+        <p>
+          <img src="images/gmail-logo.jpg" alt="E-mail" style="height:28px; vertical-align:middle; margin-right:6px;">
+          <a href="mailto:terradigital2024@gmail.com">terradigital2024@gmail.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
