@@ -1,26 +1,136 @@
-:root {
-  --bg: #f7f7f7;
-  --card: #ffffff;
-  --text: #333;
-  --muted: #666;
-  --accent: #2a7ae2;
+/* Reset básico e fonte */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
 }
-* { box-sizing: border-box; }
-html, body { height: 100%; }
-body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background: var(--bg); color: var(--text); }
-header { text-align: center; padding: 40px 20px 20px; }
-header img { max-width: 240px; width: 60%; height: auto; display: block; margin: 0 auto 8px; }
-header p { margin: 6px 0 0; color: var(--muted); }
-main { max-width: 980px; margin: 0 auto; padding: 20px; }
-h2 { font-size: 1.75rem; margin: 0 0 12px; }
-hr { border: 0; height: 1px; background: #e5e5e5; margin: 20px 0; }
-.servicos { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
-.card { background: var(--card); border-radius: 12px; padding: 16px; box-shadow: 0 2px 6px rgba(0,0,0,.05); text-align: left; }
-.card img { max-width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 10px; }
-.card h3 { font-size: 1.05rem; margin: 0 0 6px; }
-.card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
-.contact { display:flex; flex-direction:column; gap:8px; margin-top: 6px; }
-.contact a { color: var(--accent); text-decoration: none; font-weight: 600; }
+
+/* Cabeçalho com banner */
+header {
+  background: url("images/banner.png") no-repeat center center;
+  background-size: cover; /* Preenche todo o espaço */
+  color: white;
+  text-align: center;
+  padding: 80px 20px; /* aumenta a altura */
+  position: relative;
+}
+
+/* Logo */
+header .logo {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Texto slogan */
+header .slogan {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-top: 10px;
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* dá contraste no texto */
+}
+
+/* Seções */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Títulos das seções */
+h2 {
+  color: #1a73e8;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Lista de serviços */
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+li {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+li img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Seção de Contato */
+#contato p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+#contato img {
+  width: 25px;
+  height: 25px;
+}
+
+/* Links */
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Remove o banner da seção de serviços */
+#servicos img {
+  display: none;
+}
+
+/* Responsividade */
 @media (max-width: 600px) {
-  header { padding: 20px 10px; }
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li {
+    width: 90%;
+  }
 }
