@@ -8,34 +8,36 @@ body {
   line-height: 1.6;
 }
 
-/* Cabeçalho com banner */
+/* Cabeçalho com banner preenchendo a área inteira */
 header {
   background: url("images/banner.png") no-repeat center center;
   background-size: cover; /* Preenche todo o espaço */
   color: white;
   text-align: center;
-  padding: 80px 20px; /* aumenta a altura */
+
+  /* Faz o header ocupar a tela inteira como uma "capa" */
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente logo + slogan */
+  align-items: center;     /* Centraliza horizontalmente logo + slogan */
   position: relative;
 }
 
 /* Logo */
 header .logo {
-  width: 120px;
+  width: 150px; /* ajuste conforme o tamanho do banner */
   height: auto;
-  display: block;
-  margin: 0 auto 15px;
-  position: relative;
   z-index: 2;
 }
 
 /* Texto slogan */
 header .slogan {
-  font-size: 1.3em;
+  font-size: 1.5em;
   font-weight: bold;
-  margin-top: 10px;
-  position: relative;
+  margin-top: 15px;
   z-index: 2;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* dá contraste no texto */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* contraste no texto sobre o banner */
 }
 
 /* Seções */
@@ -77,6 +79,7 @@ li:hover {
   box-shadow: 0 8px 12px rgba(0,0,0,0.2);
 }
 
+/* Imagens dos cards de serviços permanecem visíveis */
 li img {
   width: 100px;
   height: 100px;
@@ -118,8 +121,8 @@ footer {
   margin-top: 40px;
 }
 
-/* Remove o banner da seção de serviços */
-#servicos img {
+/* Remove apenas o banner antigo da seção de serviços */
+#servicos #banner {
   display: none;
 }
 
@@ -132,5 +135,18 @@ footer {
 
   li {
     width: 90%;
+  }
+
+  header {
+    padding: 40px 20px;
+    height: auto; /* ajusta altura do header em telas pequenas */
+  }
+
+  header .slogan {
+    font-size: 1.2em;
+  }
+
+  header .logo {
+    width: 120px;
   }
 }
