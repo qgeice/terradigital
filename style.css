@@ -8,34 +8,29 @@ body {
   line-height: 1.6;
 }
 
-/* Cabeçalho com banner */
+/* Cabeçalho */
 header {
-  background: url("images/banner.png") no-repeat center center;
-  background-size: cover; /* Preenche todo o espaço */
+  background-color: #1a73e8;
   color: white;
   text-align: center;
-  padding: 80px 20px; /* aumenta a altura */
-  position: relative;
+  padding: 40px 20px;
 }
 
-/* Logo */
-header .logo {
-  width: 120px;
+header img {
+  width: 100px;
   height: auto;
   display: block;
   margin: 0 auto 15px;
-  position: relative;
-  z-index: 2;
 }
 
-/* Texto slogan */
-header .slogan {
-  font-size: 1.3em;
-  font-weight: bold;
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
   margin-top: 10px;
-  position: relative;
-  z-index: 2;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* dá contraste no texto */
+  font-size: 1.2em;
 }
 
 /* Seções */
@@ -118,9 +113,14 @@ footer {
   margin-top: 40px;
 }
 
-/* Remove o banner da seção de serviços */
+/* Banner da seção de serviços */
 #servicos img {
-  display: none;
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 /* Responsividade */
